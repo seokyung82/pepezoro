@@ -181,7 +181,7 @@ function App() {
                       {isOpened ? (
                         <span className="check">✓</span>
                       ) : (
-                        <div className="pepero-package">
+                        <div className={`pepero-package pepero-${character.id}`}>
                           <span className="package-brand">
                             PEPERO
                           </span>
@@ -260,7 +260,6 @@ function App() {
       {/* 케로로 소대 댄스 */}
       {celebration && !zoroIntro && !ending && (
         <section className="dance-scene">
-          <h2>THANK YOU! ♥</h2>
 
           <div className="dance-line">
             {characters.map((character, index) => (
@@ -285,7 +284,9 @@ function App() {
                 {/* 케로로: 날아다니는 장난스러운 효과 */}
                 {character.id === "keroro" && (
                   <div className="special-effect keroro-effect">
-                    💩
+                    <span>💩</span>
+                    <span>💩</span>
+                    <span>💩</span>
                   </div>
                 )}
 
@@ -301,26 +302,27 @@ function App() {
                 {/* 기로로: 별빛 발사 */}
                 {character.id === "giroro" && (
                   <div className="special-effect giroro-effect">
-                    <span>✦</span>
-                    <span>✧</span>
-                    <span>★</span>
+                    <span>🔫</span>
+                    <span>🔫</span>
+                    <span>🔫</span>
                   </div>
                 )}
 
                 {/* 쿠루루: 노란 소용돌이 */}
                 {character.id === "kururu" && (
                   <div className="special-effect kururu-effect">
-                    <span>✧</span>
-                    <span>◉</span>
-                    <span>✦</span>
+                    <span>🌀</span>
+                    <span>🌀</span>
+                    <span>🌀</span>
                   </div>
                 )}
 
                 {/* 도로로: 파란 닌자 연기 */}
                 {character.id === "dororo" && (
                   <div className="special-effect dororo-effect">
-                    <span>☁</span>
-                    <span>✧</span>
+                    <span>💨</span>
+                    <span>🥷 </span>
+                    <span>💨</span>
                   </div>
                 )}
               </div>
